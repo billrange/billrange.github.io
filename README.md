@@ -1,5 +1,5 @@
-# Click: [xuaikun.github.io](https://xuaikun.github.io/)
+# Click: [billrange.github.io](https://billrange.github.io/)
 
-# 感觉不错给个Star
+# bill's Homepage!
 
-# Fork之后，链接记得修改哦
+# See new style -->
