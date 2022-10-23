@@ -1,2 +1,4 @@
-theme: jekyll-theme-minimal
-image: https://github.com/billrange/billrange.github.io/blob/main/photo.JPG
+theme: jekyll-theme-cayman
+title: StrawDI
+description: The Strawberry Digital Images Data Set
+logo: logo.jpg
