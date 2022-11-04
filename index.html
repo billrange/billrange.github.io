@@ -1,140 +1,307 @@
 <!DOCTYPE html>
-<!-- saved from url=(0026)https://billrange.github.io/ -->
-<html lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-
-<!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Introduction | StrawDI(For study)</title>
-<meta name="generator" content="Jekyll v3.9.0">
-<meta property="og:title" content="Introduction">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="The Strawberry Digital Images Data Set">
-<meta property="og:description" content="The Strawberry Digital Images Data Set">
-<link rel="canonical" href="https://billrange.github.io/">
-<meta property="og:url" content="https://billrange.github.io/">
-<meta property="og:site_name" content="StrawDI">
-<script type="application/ld+json">
-{"@type":"WebSite","url":"https://billrange.github.io/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://billrange.github.io/logo.jpg"}},"headline":"Introduction","description":"The Strawberry Digital Images Data Set","name":"StrawDI","@context":"https://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="./Introduction _ StrawDI_files/style.css">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">StrawDI</h1>
-      <h2 class="project-tagline">The Strawberry Digital Images Data Set</h2>
-      
-      
-    </section>
-
-    <section class="main-content">
-      <h2 id="introduction">Introduction</h2>
-<p>This page is the official website of the Strawberry Digital Images (StrawDI) data set, which contains 8000 images of strawberries, taken from 20 plantations, within an approximate area of 150 hectares, in the province of Huelva, Spain. The plantations were not changed in any way for the experiment and the images were taken from real production conditions during a full picking campaign (from mid-December 2018 to early May 2019).</p>
-
-<p>The capture device used was a Samsung Galaxy S7 Edge smartphone attached to an extendable arm. In order to build a data set close to the target application, the images were taken under different conditions of brightness, at a distance of approximately 20 cm from the ridge, at about 35 +-10 cm height and an approximate angle of 25 +-10º. The images have a 4032x3024 resolution and are stored in a JPEG format.</p>
-
-<p><img src="./Introduction _ StrawDI_files/ridge.png" width="300">
-<br></p>
-
-<h3 id="contributors">Contributors</h3>
-<ul>
-  <li><a href="mailto:isaac.perez@dci.uhu.es">Isaac Pérez*</a></li>
-  <li><a href="mailto:diego.marin@diesia.uhu.es">Diego Marin*</a></li>
-  <li><a href="https://billrange.github.io/estefania.cortes@diesia.uhu.es">Estefanía Cortés-Ancos*</a></li>
-  <li><a href="https://billrange.github.io/gegundez@uhu.es">Manuel Emilio Gegúndez Arias*</a></li>
-</ul>
-
-<p><em>*Vision, Prediction, Optimisation and Control Systems Department, Science and Technology Research Centre, University of Huelva.</em></p>
-
-<h2 id="strawdi_db1">StrawDI_Db1</h2>
-<p>From the total set of images that make up the StrawDI data set, 3100 images have been selected at random. For each of these images a ground truth labelled image has been manually generated containing the individual segmentation of all the strawberries appearing in the image.</p>
-
-<p>To reduce the computational demands on the models, the images have been rescaled to 1008 x 756 and stored in PNG format. This set of images constitutes the <strong>StrawDI_Db1</strong> database. This database is divided into train (2800 images), validation (100 images) and test (200 images) subsets.</p>
-
-<h3 id="labeling-policy">Labeling Policy</h3>
-<p>The image labelling process has been validated by three blind reviews of the data with four reviewers, thus guaranteeing the quality of the segmentations. The criterion followed in the labelling process consists of creating as accurate a mask as possible for each of the strawberries appearing in the image, including extreme cases such as strawberries that are almost imperceptible due to distance, occlusions, being at the edges of the image or still unripe.</p>
-
-<p>The ground truth images are grayscale images that are the same size as the original rgb images and they are stored in PNG format. In the ground truth images, the value 0 is used for non-strawberry pixels, and strawberry pixels have the index of their strawberry, from 1 to the number of strawberries in the image.</p>
-
-<h3 id="examples">Examples</h3>
-<p>Below are examples of our high quality pixel annotations. Overlayed colors encode individual instances of strawberries.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Original image</th>
-      <th style="text-align: center">Original image with annotations</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><img src="./Introduction _ StrawDI_files/2647.png" alt=""></td>
-      <td style="text-align: center"><img src="./Introduction _ StrawDI_files/2647m.png" alt=""></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><img src="./Introduction _ StrawDI_files/2663.png" alt=""></td>
-      <td style="text-align: center"><img src="./Introduction _ StrawDI_files/2663m.png" alt=""></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><img src="./Introduction _ StrawDI_files/2780.png" alt=""></td>
-      <td style="text-align: center"><img src="./Introduction _ StrawDI_files/2780m.png" alt=""></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><img src="./Introduction _ StrawDI_files/404.png" alt=""></td>
-      <td style="text-align: center"><img src="./Introduction _ StrawDI_files/404m.png" alt=""></td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><img src="./Introduction _ StrawDI_files/544.png" alt=""></td>
-      <td style="text-align: center"><img src="./Introduction _ StrawDI_files/544m.png" alt=""></td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="using-the-database">Using the database</h2>
-<p>Please include the following acknowledgment…</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Kindly provided by the StrawDI Team (see https://billrange.github.io/).
-</code></pre></div></div>
-<p>…as well as a reference to the following paper:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{PEREZBORRERO2020105736,
-title = "A fast and accurate deep learning method for strawberry instance segmentation",
-journal = "Computers and Electronics in Agriculture",
-volume = "178",
-pages = "105736",
-year = "2020",
-issn = "0168-1699",
-doi = "https://doi.org/10.1016/j.compag.2020.105736",
-url = "http://www.sciencedirect.com/science/article/pii/S0168169920300624",
-author = "Isaac Pérez-Borrero and Diego Marín-Santos and Manuel E. Gegúndez-Arias and Estefanía Cortés-Ancos"
-}
-</code></pre></div></div>
-
-<p>To inform us of a publication using StrawDI_Db1, or to give us any other feedback, please contact <a href="mailto:isaac.perez@dci.uhu.es">Isaac Pérez</a> or <a href="mailto:diego.marin@diesia.uhu.es">Diego Marin</a>.</p>
-
-<h2 id="download">Download</h2>
-<p>To download the database: <a href="https://drive.google.com/file/d/1elFB-q9dgPbfnleA7qIrTb96Qsli8PZl/view">StrawDI_Db1</a></p>
-
-<h2 id="license">License</h2>
-<p>This dataset is made freely available to academic and non-academic entities for non-commercial purposes such as academic research, teaching, scientific publications, or personal experimentation. Permission is granted to use the data given that you agree:</p>
-
-<ol>
-  <li>That the dataset comes “AS IS”, without express or implied warranty. Although every effort has been made to ensure accuracy, we (Isaac Perez-Borrero, Diego Marin, Manuel E. Gegundez-Arias and Estefanía Cortés-Ancos) do not accept any responsibility for errors or omissions.</li>
-  <li>That you include a reference to the StrawDI_Db1 Dataset in any work that makes use of the dataset. For research papers, cite our preferred publication as listed on <a href="https://strawdi.github.io/#using-the-database">Using the database</a> Section.</li>
-  <li>That you do not distribute this dataset or modified versions. It is permissible to distribute derivative works in as far as they are abstract representations of this dataset (such as models trained on it or additional annotations that do not directly include any of our data) and do not allow to recover the dataset or something similar in character.</li>
-  <li>That you may not use the dataset or any derivative work for commercial purposes as, for example, licensing or selling the data, or using the data with a purpose to procure a commercial gain.</li>
-  <li>That all rights not expressly granted to you are reserved by us (Isaac Perez-Borrero, Diego Marin, Manuel E. Gegundez-Arias and Estefanía Cortés-Ancos).</li>
-</ol>
-
-
-      <footer class="site-footer">
-        
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com/">GitHub Pages</a>.</span>
-      </footer>
-    </section>
-
-    
+<!-- saved from url=(0029)https://cocodataset.org/#home -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
+  <title>COCO - Common Objects in Context</title>
+  <script type="text/javascript" async="" src="./COCO - Common Objects in Context_files/ga.js.下载"></script><script async="" src="./COCO - Common Objects in Context_files/analytics.js.下载"></script><script src="./COCO - Common Objects in Context_files/jquery.min.js.下载"></script>
+  <link rel="stylesheet" href="./COCO - Common Objects in Context_files/jquery-ui.css">
+  <script src="./COCO - Common Objects in Context_files/jquery-ui.min.js.下载"></script>
+  <link rel="stylesheet" href="./COCO - Common Objects in Context_files/bootstrap.min.css">
+  <link rel="stylesheet" href="./COCO - Common Objects in Context_files/bootstrap-theme.min.css">
+  <script src="./COCO - Common Objects in Context_files/bootstrap.min.js.下载"></script>
+  <script src="./COCO - Common Objects in Context_files/jquery.dataTables.min.js.下载"></script>
+  <link rel="stylesheet" href="./COCO - Common Objects in Context_files/jquery.dataTables.min.css">
+  <script src="./COCO - Common Objects in Context_files/dataTables.buttons.min.js.下载"></script>
+  <script src="./COCO - Common Objects in Context_files/buttons.html5.min.js.下载"></script>
+  <script src="./COCO - Common Objects in Context_files/latest.js.下载"></script>
+  <script src="./COCO - Common Objects in Context_files/jszip.min.js.下载"></script>
+  <script src="./COCO - Common Objects in Context_files/pdfmake.min.js.下载"></script><script type="text/javascript" async="" src="./COCO - Common Objects in Context_files/MathJax.js.下载"></script>
+  <script src="./COCO - Common Objects in Context_files/vfs_fonts.js.下载"></script>
+  <link rel="stylesheet" href="./COCO - Common Objects in Context_files/buttons.dataTables.min.css">
+  <link rel="stylesheet" href="./COCO - Common Objects in Context_files/cocostyles.css">
+  <script src="./COCO - Common Objects in Context_files/cocoscripts.js.下载"></script>
+  <script>googleAnalytics();</script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+  <script>$(function(){datasetTabNav()});</script>
+  <div id="header"><div id="headerBody">
+    <img id="headerImage" src="./COCO - Common Objects in Context_files/coco-logo.png" alt="Logo">
+    <div id="headerTabs">
+      <div id="headerEmail">info@cocodataset.org</div>
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <div class="nav-tab-header"></div>
+          <a data-toggle="tab" href="https://cocodataset.org/#home">Home</a>
+        </li>
+        <li>
+          <div class="nav-tab-header"></div>
+          <a data-toggle="tab" href="https://cocodataset.org/#people">People</a>
+        </li>
+        <li class="dropdown">
+          <div class="nav-tab-header"></div>
+          <a class="dropdown-toggle" data-toggle="dropdown">Dataset<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a data-toggle="tab" href="https://cocodataset.org/#overview"><i class="glyphicon glyphicon-info-sign"></i> Overview</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#explore"><i class="glyphicon glyphicon-search"></i> Explore</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#download"><i class="glyphicon glyphicon-download"></i> Download</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#external"><i class="glyphicon glyphicon-cloud-download"></i> External</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#termsofuse"><i class="glyphicon glyphicon-list-alt"></i> Terms of Use</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <div class="nav-tab-header"></div>
+          <a class="dropdown-toggle" data-toggle="dropdown">Tasks<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a data-toggle="tab" href="https://cocodataset.org/#detection-2020"><i class="glyphicon glyphicon-king"></i> Detection 2020</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#keypoints-2020"><i class="glyphicon glyphicon-king"></i> Keypoints 2020</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#panoptic-2020"><i class="glyphicon glyphicon-king"></i> Panoptic 2020</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#densepose-2020"><i class="glyphicon glyphicon-king"></i> DensePose 2020</a></li>
+            <li class="divider"></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#detection-2019"><i class="glyphicon glyphicon-king"></i> Detection 2019</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#keypoints-2019"><i class="glyphicon glyphicon-king"></i> Keypoints 2019</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#stuff-2019"><i class="glyphicon glyphicon-king"></i> Stuff 2019</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#panoptic-2019"><i class="glyphicon glyphicon-king"></i> Panoptic 2019</a></li>
+            <li class="divider"></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#detection-2018"><i class="glyphicon glyphicon-king"></i> Detection 2018</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#keypoints-2018"><i class="glyphicon glyphicon-king"></i> Keypoints 2018</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#stuff-2018"><i class="glyphicon glyphicon-king"></i> Stuff 2018</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#panoptic-2018"><i class="glyphicon glyphicon-king"></i> Panoptic 2018</a></li>
+            <li class="divider"></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#detection-2017"><i class="glyphicon glyphicon-king"></i> Detection 2017</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#keypoints-2017"><i class="glyphicon glyphicon-king"></i> Keypoints 2017</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#stuff-2017"><i class="glyphicon glyphicon-king"></i> Stuff 2017</a></li>
+            <li class="divider"></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#detection-2016"><i class="glyphicon glyphicon-king"></i> Detection 2016</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#keypoints-2016"><i class="glyphicon glyphicon-king"></i> Keypoints 2016</a></li>
+            <li class="divider"></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#detection-2015"><i class="glyphicon glyphicon-king"></i> Detection 2015</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#captions-2015"><i class="glyphicon glyphicon-king"></i> Captioning 2015</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <div class="nav-tab-header"></div>
+          <a class="dropdown-toggle" data-toggle="dropdown">Evaluate<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a>Participate:</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#format-data">&nbsp;<i class="glyphicon glyphicon-cog"></i> Data Format</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#format-results">&nbsp;<i class="glyphicon glyphicon-cog"></i> Results Format</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#guidelines">&nbsp;<i class="glyphicon glyphicon-cog"></i> Test Guidelines</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#upload">&nbsp;<i class="glyphicon glyphicon-cog"></i> Upload Results</a></li>
+            <li class="divider"></li>
+            <li><a>Evaluate:</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#detection-eval">&nbsp;<i class="glyphicon glyphicon-stats"></i> Detection</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#keypoints-eval">&nbsp;<i class="glyphicon glyphicon-stats"></i> Keypoints</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#stuff-eval">&nbsp;<i class="glyphicon glyphicon-stats"></i> Stuff</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#panoptic-eval">&nbsp;<i class="glyphicon glyphicon-stats"></i> Panoptic</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#densepose-eval">&nbsp;<i class="glyphicon glyphicon-stats"></i> DensePose</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#captions-eval">&nbsp;<i class="glyphicon glyphicon-stats"></i> Captions</a></li>
+            <li class="divider"></li>
+            <li><a>Leaderboards:</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#detection-leaderboard">&nbsp;<i class="glyphicon glyphicon-th-list"></i> Detection</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#keypoints-leaderboard">&nbsp;<i class="glyphicon glyphicon-th-list"></i> Keypoints</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#stuff-leaderboard">&nbsp;<i class="glyphicon glyphicon-th-list"></i> Stuff</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#panoptic-leaderboard">&nbsp;<i class="glyphicon glyphicon-th-list"></i> Panoptic</a></li>
+            <li><a data-toggle="tab" href="https://cocodataset.org/#captions-leaderboard">&nbsp;<i class="glyphicon glyphicon-th-list"></i> Captions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div></div>
+  <div id="content" class="tab-content">
+    <div role="tabpanel" class="tab-pane fade active in" id="home"><script>$(function(){populateHomePage()})</script>
+<h1>News</h1>
+<ul class="fontSubtle fontBigger">
+  <li>We are pleased to announce the <a href="https://www.lvisdataset.org/challenge_2021">LVIS 2021 Challenge and Workshop</a> to be held at ICCV.</li>
+  <li>Please note that there will not be a COCO 2021 Challenge, instead, we encourage people to participate in the LVIS 2021 Challenge.</li>
+  <li>We have partnered with the team behind the open-source tool <a class="fontBoldish" href="https://fiftyone.ai/">FiftyOne</a> to make it easier to download, visualize, and evaluate COCO</li>
+  <li><a class="fontBoldish" href="https://fiftyone.ai/">FiftyOne</a> is an open-source tool facilitating visualization and access to COCO data resources and serves as an evaluation tool for model analysis on COCO.</li>
+  <!--
+  <li>We are pleased to announce the COCO 2020 <a class="fontBoldish" href="#detection-2020">Detection</a>, <a class="fontBoldish" href="#keypoints-2020">Keypoint</a>, <a class="fontBoldish" href="#panoptic-2020">Panoptic</a>, and <a class="fontBoldish" href="#densepose-2020">DensePose</a> Challenges.<br/></li>
+  <li class="fontBoldish">The new rules and awards for this year challenges encourage innovative methods.</li>
+  <li>Results to be announced at the <a class="fontBoldish" href="workshop/coco-lvis-eccv-2020.html">Joint COCO and LVIS Recognition</a> ECCV workshop.</li>
+  -->
+  <!--
+  <li>We are pleased to announce the COCO 2019 <a class="fontBoldish" href="#detection-2019">Detection</a>, <a class="fontBoldish" href="#keypoints-2019">Keypoint</a>, <a class="fontBoldish" href="#panoptic-2019">Panoptic</a>, and <a class="fontBoldish" href="http://densepose.org/">DensePose</a> Challenges.<br/></li>
+  <li class="fontBoldish">The new rules and awards for this year challenges encourage innovative methods.</li>
+  <li>Results to be announced at the <a class="fontBoldish" href="workshop/coco-mapillary-iccv-2019.html">Joint COCO and Mapillary Recognition</a> ICCV workshop.</li> -->
+  <!--
+  <li>Congratulations to the <b>winners</b> of the <a class="fontBoldish" href="workshop/coco-mapillary-eccv-2018.html">ECCV 2018 Joint COCO and Mapillary Recognition</a> Workshop! Please visit the challenge website to view the winners and their talk slides.</li>
+  <li><span class="fontBoldish">Note: COCO challenge deadline extended to August 17th.</span></li>
+  <li>We are pleased to announce the COCO 2018 <a class="fontBoldish" href="#detection-2018">Detection</a> and <a class="fontBoldish" href="#keypoints-2018">Keypoint</a> Challenges.<br/></li>
+  <li>Check out the new COCO <a class="fontBoldish" href="#panoptic-2018">Panoptic Segmentation</a> and <a class="fontBoldish" href="http://densepose.org/" target="_blank">DensePose</a> Challenges!</br></li>
+  <li>Results to be announced at the <a class="fontBoldish" href="workshop/coco-mapillary-eccv-2018.html">Joint COCO and Mapillary Recognition</a> ECCV workshop.</li>
+  -->
+</ul>
+<div class="columnFeatures">
+  <h1>What is COCO?</h1>
+  <img class="iconsImage" src="./COCO - Common Objects in Context_files/coco-icons.png">
+  <p class="fontSubtle">COCO is a large-scale object detection, segmentation, and captioning dataset. COCO has several features:</p>
+  <ul class="fontSubtle fontBold noBullet">
+    <li class="checkBullet">Object segmentation</li>
+    <li class="checkBullet">Recognition in context</li>
+    <li class="checkBullet">Superpixel stuff segmentation</li>
+    <li class="checkBullet">330K images (&gt;200K labeled)</li>
+    <li class="checkBullet">1.5 million object instances</li>
+    <li class="checkBullet">80 object categories</li>
+    <li class="checkBullet">91 stuff categories</li>
+    <li class="checkBullet">5 captions per image</li>
+    <li class="checkBullet">250,000 people with keypoints</li>
+  </ul>
+</div>
+<div class="columnPeople">
+  <h1>Collaborators</h1>
+  <div class="fontSubtle" id="cocoPeople"><span class="fontBold">Tsung-Yi Lin</span> Google Brain<br><span class="fontBold">Genevieve Patterson</span> MSR, Trash TV<br><span class="fontBold">Matteo R. Ronchi</span> Caltech<br><span class="fontBold">Yin Cui</span> Google<br><span class="fontBold">Michael Maire</span> TTI-Chicago<br><span class="fontBold">Serge Belongie</span> Cornell Tech<br><span class="fontBold">Lubomir Bourdev</span> WaveOne, Inc.<br><span class="fontBold">Ross Girshick</span> FAIR<br><span class="fontBold">James Hays</span> Georgia Tech<br><span class="fontBold">Pietro Perona</span> Caltech<br><span class="fontBold">Deva Ramanan</span> CMU<br><span class="fontBold">Larry Zitnick</span> FAIR<br><span class="fontBold">Piotr Dollár</span> FAIR<br></div>
+</div>
+<div class="columnSponsors">
+  <h1>Sponsors</h1>
+  <p><a href="http://www.cvdfoundation.org/" target="_blank"><img class="wide" src="./COCO - Common Objects in Context_files/sponsors-CVDF.png"></a></p>
+  <p><img class="wide" src="./COCO - Common Objects in Context_files/sponsors-microsoft.png"></p>
+  <p><img class="wide" src="./COCO - Common Objects in Context_files/sponsors-facebook.png"></p>
+  <p><img class="wide" src="./COCO - Common Objects in Context_files/sponsors-MightyAI.svg"></p>
+</div>
+<p><a href="http://arxiv.org/abs/1405.0312" target="_blank"><img class="wide" src="./COCO - Common Objects in Context_files/coco-paper.png"></a></p>
+<p><img class="wide" src="./COCO - Common Objects in Context_files/coco-examples.jpg"></p>
+</div>
+  <div role="tabpanel" class="tab-pane fade" id="people"></div>
+<div role="tabpanel" class="tab-pane fade" id="overview"></div>
+<div role="tabpanel" class="tab-pane fade" id="explore"></div>
+<div role="tabpanel" class="tab-pane fade" id="download"></div>
+<div role="tabpanel" class="tab-pane fade" id="external"></div>
+<div role="tabpanel" class="tab-pane fade" id="termsofuse"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-2020"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-2020"></div>
+<div role="tabpanel" class="tab-pane fade" id="panoptic-2020"></div>
+<div role="tabpanel" class="tab-pane fade" id="densepose-2020"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-2019"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-2019"></div>
+<div role="tabpanel" class="tab-pane fade" id="stuff-2019"></div>
+<div role="tabpanel" class="tab-pane fade" id="panoptic-2019"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-2018"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-2018"></div>
+<div role="tabpanel" class="tab-pane fade" id="stuff-2018"></div>
+<div role="tabpanel" class="tab-pane fade" id="panoptic-2018"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-2017"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-2017"></div>
+<div role="tabpanel" class="tab-pane fade" id="stuff-2017"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-2016"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-2016"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-2015"></div>
+<div role="tabpanel" class="tab-pane fade" id="captions-2015"></div>
+<div role="tabpanel" class="tab-pane fade" id="format-data"></div>
+<div role="tabpanel" class="tab-pane fade" id="format-results"></div>
+<div role="tabpanel" class="tab-pane fade" id="guidelines"></div>
+<div role="tabpanel" class="tab-pane fade" id="upload"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-eval"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-eval"></div>
+<div role="tabpanel" class="tab-pane fade" id="stuff-eval"></div>
+<div role="tabpanel" class="tab-pane fade" id="panoptic-eval"></div>
+<div role="tabpanel" class="tab-pane fade" id="densepose-eval"></div>
+<div role="tabpanel" class="tab-pane fade" id="captions-eval"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-leaderboard"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-leaderboard"></div>
+<div role="tabpanel" class="tab-pane fade" id="stuff-leaderboard"></div>
+<div role="tabpanel" class="tab-pane fade" id="panoptic-leaderboard"></div>
+<div role="tabpanel" class="tab-pane fade" id="captions-leaderboard"></div>
+</div>
+  <div id="footer"><div>
+    <a href="https://github.com/cocodataset/cocodataset.github.io" target="_blank">Github Page Source</a>
+    <a href="https://cocodataset.org/#termsofuse">Terms of Use</a>
+  </div></div>
 
 </body></html>
